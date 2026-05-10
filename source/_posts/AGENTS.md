@@ -17,6 +17,7 @@
 - 当前文章正文以中文为主，可混用英文术语、外链、列表、标题层级与数学公式。
 - 数学公式通过 `../../_config.yml` 中的 markdown-it 插件链渲染，额外样式注入在 `../../scripts/katex.js`。
 - 现有文章标题与文件名不必完全一致；对外展示以 frontmatter `title` 为准。
+- 单篇文章配图时，图片放在与文章文件同名的资源目录中，正文使用普通 Markdown `![](image.png)` 引用。
 
 ## ANTI-PATTERNS
 - 不要省略 frontmatter 再把元信息写进正文开头；Hexo 依赖 frontmatter 生成索引与归档。
@@ -31,4 +32,4 @@
 
 ## NOTES
 - 当前目录只有 1 篇文章，规范以现有样文和 scaffold 共同定义。
-- 若未来开始为单篇文章配图或附件，需先统一约定资产放置方式，再扩写本文件。
+- 站点已启用 `post_asset_folder: true` 与 `markdown.images.post_asset: true`，不要改回大括号图片标签写法。
