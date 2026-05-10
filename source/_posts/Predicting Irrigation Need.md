@@ -24,6 +24,8 @@ Playground Series - Season 6 Episode 4
 
 本次比赛与 [@Yoican](https://www.kaggle.com/yoicanshan) 组队完成。
 
+<!-- more -->
+
 ## 我的解法
 
 [Piredicting Irrigation Need GitHub 仓库](https://github.com/jollyxenon/Predicting_Irrigation_Need)

@@ -7,13 +7,13 @@
 | Task | Location | Notes |
 |------|----------|-------|
 | 参考 frontmatter 写法 | `Predicting Irrigation Need.md` | 已包含 `title/date/categories/tags` |
-| 调整新文章默认字段 | `../../scaffolds/post.md` | 默认模板只给 `title/date/tags` |
+| 调整新文章默认字段 | `../../scaffolds/post.md` | 默认模板包含 `title/date/categories/tags/description` 与 `<!-- more -->` |
 | 站点级 permalink / 更新时间逻辑 | `../../_config.yml` | 影响所有文章输出 URL 与更新时间 |
 
 ## CONVENTIONS
 - 文章文件是 Markdown，默认放在 `source/_posts/` 根下。
 - frontmatter 至少保证 `title`、`date`；现有文章还使用 `categories` 与 `tags`。
-- `scaffolds/post.md` 默认不含 `categories`，如果文章需要分类，应手动补上。
+- `scaffolds/post.md` 已预置 `categories`、`tags`、`description` 与 `<!-- more -->`，新文章应按需补全摘要与分类。
 - 当前文章正文以中文为主，可混用英文术语、外链、列表、标题层级与数学公式。
 - 数学公式通过 `../../_config.yml` 中的 markdown-it 插件链渲染，额外样式注入在 `../../scripts/katex.js`。
 - 现有文章标题与文件名不必完全一致；对外展示以 frontmatter `title` 为准。
@@ -22,7 +22,7 @@
 ## ANTI-PATTERNS
 - 不要省略 frontmatter 再把元信息写进正文开头；Hexo 依赖 frontmatter 生成索引与归档。
 - 不要随意改旧文文件名或日期而不考虑 permalink；当前 URL 含年月日与标题。
-- 不要假设 scaffold 已包含全部字段；`categories` 目前需要按文章主题手动添加。
+- 不要把 scaffold 里的 `description` 与 `<!-- more -->` 留空后直接发布；首页摘要依赖这两类信息至少其一。
 - 不要把目录当成资产仓随意堆放无关文件；这里应以可发布文章为中心。
 
 ## STYLE SIGNALS
@@ -31,5 +31,5 @@
 - 正文允许使用 `$...$` 与 `$$...$$` 数学公式写法；中文紧邻公式的场景也应保持这种写法，不必强行插入空格。
 
 ## NOTES
-- 当前目录只有 1 篇文章，规范以现有样文和 scaffold 共同定义。
+- 当前目录已有多篇长文；首页摘要展示依赖 frontmatter `description` 或正文中的 `<!-- more -->`。
 - 站点已启用 `post_asset_folder: true` 与 `markdown.images.post_asset: true`，不要改回大括号图片标签写法。
