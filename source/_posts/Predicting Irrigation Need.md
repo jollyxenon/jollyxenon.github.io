@@ -1,6 +1,6 @@
 ---
 title: Predicting Irrigation Need 比赛回顾
-date: 2026-05-08
+date: 2026-05-10 16:00:00
 categories:
   - 技术
 tags:
@@ -8,8 +8,6 @@ tags:
   - Kaggle
   - 复盘
 ---
-
-# Predicting Irrigation Need 比赛回顾
 
 Playground Series - Season 6 Episode 4
 
