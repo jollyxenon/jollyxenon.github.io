@@ -55,6 +55,13 @@ prismjs:
   line_number: true
   tab_replace: ""
 
+markdown:
+  plugins:
+    - name: "markdown-it-cjk-breaks"
+    - name: "@renbaoshuo/markdown-it-katex"
+      options:
+        skipDelimitersCheck: true
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -92,6 +99,7 @@ pagination_dir: page
 include:
 exclude:
 ignore:
+  - "**/AGENTS.md"
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
